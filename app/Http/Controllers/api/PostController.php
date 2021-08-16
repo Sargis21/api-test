@@ -7,7 +7,6 @@ use App\Http\Requests\PostStoreUpdateRequest;
 use App\Http\Resources\PostResource;
 use App\Models\Post;
 use App\Http\Controllers\Controller;
-use App\Models\Tag;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class PostController extends Controller

@@ -24,14 +24,14 @@ class TagController extends Controller
 
     public function store(TagStoreRequest $request): JsonResource
     {
-        return TagResource::collection([Tag::create(['name' => Str::lower($request->name)])]);
+        return TagResource::collection([Tag::create(['name' => $request->name])]);
     }
 
 
     public function update(Request $request, Tag $tag): JsonResource
     {
         $this->isUnique($request, $tag);
-        $tag->update(['name' => Str::lower($request->name)]);
+        $tag->update(['name' => $request->name]);
         return TagResource::collection([$tag]);
     }
 
